@@ -1,0 +1,11 @@
+apiVersion: 1
+datasources:
+  - name: Loki
+    type: loki
+    access: proxy
+    url: http://nginx-loki:80
+    jsonData:
+      httpHeaderName1: "Authorization"
+    secureJsonData:
+      httpHeaderValue1: "Basic YWRtaW46YWRtaW4="
+    isDefault: true
