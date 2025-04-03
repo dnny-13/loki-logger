@@ -94,7 +94,6 @@ public class LogService {
             String line = null;
             try {
                 line = Utils.serialize(logLine);
-//                api.logging().logToOutput(line);
             } catch (JsonProcessingException e) {
                 api.logging().logToError("[-] Failed to serialize log line", e);
             }
