@@ -246,7 +246,7 @@ public class LokiLoggerUI {
             config.setUploadFrequencySeconds(newFrequency);
             config.setAutostartAll(autostartAllProjects.isSelected());
             config.setAutostartThis(autostartThisProject.isSelected());
-            config.saveSettings(api);
+            config.storeSettings(api);
 
             api.logging().logToOutput("[+] Loki Logger settings saved successfully.");
 
