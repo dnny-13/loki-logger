@@ -119,9 +119,9 @@ public class Config {
         Integer uploadFrequency = api.persistence().preferences().getInteger("lokiLogger.uploadFrequencySeconds");
         this.setUploadFrequencySeconds(uploadFrequency == null ? 1 : uploadFrequency);
         Boolean autoStartAll = api.persistence().preferences().getBoolean("lokiLogger.autostartAll");
-        this.setAutostartAll(autoStartAll == null || autoStartAll);
+        this.setAutostartAll(autoStartAll != null && autoStartAll);
         Boolean autoStartProject = api.persistence().preferences().getBoolean("lokiLogger." + api.project().id() + ".autostartThis");
-        this.setAutostartThis(autoStartProject == null || autoStartProject);
+        this.setAutostartThis(autoStartProject != null && autoStartProject);
     }
 
 
