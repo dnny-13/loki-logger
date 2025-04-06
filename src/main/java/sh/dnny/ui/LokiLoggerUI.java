@@ -86,7 +86,7 @@ public class LokiLoggerUI {
         // Index / Job Label.
         indexField = new JTextField(config.getJobName(), 15);
         indexField.setToolTipText("Name of the Loki job (e.g., 'burp-logs').");
-        addLabeledField(connectionPanel, "Index (Job Label):", indexField, gbc);
+        addLabeledField(connectionPanel, "Job Label:", indexField, gbc);
 
         contentPanel.add(connectionPanel);
 
